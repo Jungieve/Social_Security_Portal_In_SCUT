@@ -8,9 +8,9 @@ class UsersController < ApplicationController
   end
   
   def create
-   @user = User.new(user_params) # 
+  @user = User.new(user_params)
     if @user.save
-      #处理正确注册的情况,如果注册成功重定向到主页
+      log_in @user
       flash[:success] = "Welcome to the Sample App!"
       redirect_to @user
     else
