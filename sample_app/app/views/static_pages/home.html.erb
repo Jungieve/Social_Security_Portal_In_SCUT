@@ -1,11 +1,51 @@
-  <div class="center jumbotron">
-      <h1>Welcome to the Sample App</h1>
-      <h2>
-        This is the home page for the
-        <a href="http://www.railstutorial.org/">Ruby on Rails Tutorial</a>
-        sample application.
-      </h2>
-      <%= link_to "Sign up now!", signup_path, class: "btn btn-lg btn-primary" %>
+<div class="center jumbotron">
+<html>
+<head>
+   <title>Bootstrap 实例 - 简单的轮播（Carousel）插件</title>
+   <link href="/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+   <script src="/scripts/jquery.min.js"></script>
+   <script src="/bootstrap/js/bootstrap.min.js"></script>
+</head>
+<body>
+ 
+<div id="myCarousel" class="carousel slide">
+   <!-- 轮播（Carousel）指标 -->
+   <ol class="carousel-indicators">
+      <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+      <li data-target="#myCarousel" data-slide-to="1"></li>
+      <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
+   </ol>  
+   <!-- 轮播（Carousel）项目 -->
+   <div class="carousel-inner">
+      <div class="item active">
+         <%= image_tag("intro.jpg",alt: "First slide") %>
+      </div>
+      <div class="item">
+         <%= image_tag("keshihua.jpg",alt: "Second slide") %>
+      </div>
+      <div class="item">
+         <%= image_tag("discuss.jpg",alt: "Third slide") %>
+      </div>
+      <div class="item">
+         <%= image_tag("summerize.jpg",alt: "Forth slide") %>
+      </div>
+   </div>
+   <!-- 轮播（Carousel）导航 -->
+   <a class="carousel-control left" href="#myCarousel"
+      data-slide="prev">&lsaquo;</a>
+   <a class="carousel-control right" href="#myCarousel"
+      data-slide="next">&rsaquo;</a>
+</div>
+ 
+</body>
+</html>
+  
+      <h3><B>让数据更高效，更简单</B></h3>
+      <p>  
+        我们提供社保业务的数据处理，OLAP，数据可视化解决方案。使用前请参见
+        <a href="http://www.railstutorial.org/">这里</a>
+        并获得帮助。
+      </p>  
+      <%= link_to "新用户注册", signup_path, class: "btn btn-lg btn-primary" %>
     </div>
-    <%= link_to image_tag("rails-logo.svg", alt: "Rails logo"),
-                'http://rubyonrails.org/' %>

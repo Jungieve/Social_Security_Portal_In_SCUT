@@ -22,7 +22,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
     log_in @user
-    flash[:success] = "Welcome to the Sample App!"
+    flash[:success] = "欢迎进入社保大数据业务平台"
     redirect_to @user
     else
     render 'new'
@@ -32,7 +32,7 @@ class UsersController < ApplicationController
   def update
     @user = User.find(params[:id])
     if @user.update_attributes(user_params)
-    flash[:success] = "Profile updated"
+    flash[:success] = "资料已更新"
     redirect_to @user
     else
     render 'edit'
@@ -48,7 +48,7 @@ class UsersController < ApplicationController
   def logged_in_user
     unless logged_in?
     store_location
-    flash[:danger] = "Please log in."
+    flash[:danger] = "请登录"
     redirect_to login_url
     end
   end
