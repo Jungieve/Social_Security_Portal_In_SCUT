@@ -1,4 +1,5 @@
 class User < ActiveRecord::Base
+    has_many :microposts, dependent: :destroy
     attr_accessor :remember_token
     #rails回调before_save,把所有的电子地址转换成小写字母的形式
     before_save { self.email = email.downcase }
@@ -16,6 +17,10 @@ class User < ActiveRecord::Base
     BCrypt::Password.create(string, cost: cost)
     end
     
+    def feed
+    Micropost.where("user_id = ?", id)
+    end
+
     def User.new_token
         SecureRandom.urlsafe_base64
     end
@@ -35,4 +40,5 @@ class User < ActiveRecord::Base
     def forget
         update_attribute(:remember_digest, nil)
     end
+    
 end
