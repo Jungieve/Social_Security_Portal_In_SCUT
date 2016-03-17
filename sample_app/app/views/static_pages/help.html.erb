@@ -1,9 +1,6 @@
- <% provide(:title, "Help") %>
-    <h1>Help</h1>
-    <p>
-      Get help on the Ruby on Rails Tutorial at the
-      <a href="http://www.railstutorial.org/#help">Rails Tutorial help section</a>.
-      To get help on this sample app, see the
-      <a href="http://www.railstutorial.org/book"><em>Ruby on Rails Tutorial</em>
-      book</a>.
-</p>
+ <% provide(:title, "帮助") %>
+    <h1>帮助</h1>
+<p> 1、按照数据分析的实时性，分为在线数据分析和离线数据分析，本平台目前仅考虑离线数据分析。离线数据分析是指对大多数反馈时间要求不高的应用，比如离线统计分析、机器学习等，应采用离线分析的方式，通过数据采集工具将日志数据导入专门的分析平台进行分析。
+<br>2、系统采用目前世界上最流行的开源商务智能软件Pentaho构建平台解决方案；利用Ketlle实现大数据的ETL处理；利用Mondrian实现社保数据的OLAP分析；采用HDFS对社保数据进行存储；采用hadoop集群的方式对大数据进行运算。
+<br>3、数据运算平台以调度为主线，作为运算平台的核心控制系统，对运算平台的各个环节和运算过程中的步骤依赖关系进行控制，同时对各个环节进行监控，通过监控异常报警来提高系统的稳定性和对异常的响应速度。
+<br>本项目计划实现的web系统，将ETL、OLAP分析、图表报表显示等功能进行集成；采用B/S架构，便于项目访问、移植。根据平台的功能需求分析，在逻辑上可以进行系统模块化、层次化。</p>
